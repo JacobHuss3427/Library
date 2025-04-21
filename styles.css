@@ -9,6 +9,7 @@
 
 #landing {
   background-color: rgba(115, 66, 214, 0.1);
+  padding-bottom: 8vh;
 }
 
 .nav {
@@ -160,38 +161,37 @@ HIGHLIGHTS
 
 #highlights {
     position: relative;
+    
+    
 }
 
-#highlights:before {
-    content: "";
-    background: url(./assets/wave.svg);
-    width: 101vw;
-    height: 12vw;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    z-index: 1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateY(-100%);
-}
-
+#highlights:before,
 #highlights:after {
     content: "";
     background: url(./assets/wave.svg);
     width: 101vw;
     height: 12vw;
     position: absolute;
-    bottom: 0px;
     left: 0;
     z-index: 1;
     background-size: cover;
     background-repeat: no-repeat;
+    
+}
+
+#highlights:before {
+    transform: translateY(-100%);
+    top: 0px;
+}
+
+#highlights:after {
     transform: translateY(100%) rotate(180deg);
+    bottom: 0px;
 }
 
 .highlight__wrapper {
   display: flex;
+  
 }
 
 .highlight {
@@ -226,8 +226,59 @@ HIGHLIGHTS
   margin-bottom: 16px;
 }
 
+/* FEATURES */
 
 #features {
     background-color: rgba(115, 66, 214, 0.1);
-    height: 1000px;
+    padding-top: 13vw;
+}
+
+#features__container {
+    margin-top: 25vh;
+}
+
+.books {
+    display: flex;
+}
+
+.book {
+    width: 25%;
+    padding: 0 25px;
+}
+
+.book__img {
+    height: 380px;
+    transition: all 300ms ease;
+    display: flex;
+    cursor: no-drop;
+}
+
+.book__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.book:hover .book__img {
+    transform: scale(1.03);
+}
+
+.book__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+    width: ;
+}
+.book__title:hover {
+    text-decoration: underline;
+    cursor: no-drop;
+}
+
+.book__ratings {
+    color: #fabf2a;
+}
+
+.book__price--normal {
+    text-decoration: line-through;
+    padding-right: 6px;
+    color: #bfbfbf;
 }
